@@ -15,7 +15,7 @@ A mobile-first Spotify-connected music player, built as a zero-build static webs
 ## Before Spotify login works
 
 1. The app's Spotify developer account **must have Premium**. Users need Spotify Premium for Web Playback SDK playback.
-2. Visit the [Spotify developer dashboard](https://developer.spotify.com/dashboard), open the existing Spotify app, and add the exact production URL **`https://tidemusic-test.vercel.app/`** to **Redirect URIs**, if it is not already there. Save.
+2. Visit the [Spotify developer dashboard](https://developer.spotify.com/dashboard), open the existing Spotify app, and add the exact production URL **`https://tidemusic.vercel.app/`** to **Redirect URIs**, if it is not already there. Save.
 3. For local development on your own computer, use a configured loopback redirect. Spotify requires the redirect to match exactly, including the slash; the app always uses the current page URL.
 4. Spotify's development mode restricts sign-in to explicitly allowed users. Add the tester in the app's **User Management** area when applicable. Limits depend on the app's creation date and Spotify's rules.
 5. Use an HTTPS origin or an accepted localhost origin. Enable DRM / protected content in your browser if the SDK cannot play.
@@ -24,9 +24,9 @@ If login shows `INVALID_CLIENT`, check the Spotify Redirect URI and that the app
 
 ## Hosting
 
-The site is just `index.html` and `vercel.json`; no framework, build command or environment secrets are required. The intended existing Vercel project is **`tidemusic-test`** (production URL: `https://tidemusic-test.vercel.app/`).
+The site is just `index.html` and `vercel.json`; no framework, build command or environment secrets are required. The connected Vercel project is **`tidemusic`** (production URL: `https://tidemusic.vercel.app/`).
 
-**Note:** As of this update, the Vercel project is not connected to this repository's Git integration. To enable automatic publishing, connect `jdarkyeka6/TideMusic` to the existing `tidemusic-test` Vercel project and set the production branch to `main`, or import the repository as a separate project. The current project may have Vercel Authentication protection enabled, which affects public access.
+**Deploy status:** The GitHub repository `jdarkyeka6/TideMusic` is linked to the `tidemusic` Vercel project. Pushing to `main` automatically triggers a production deployment. The project uses standard Vercel Authentication protection for preview URLs; the production alias is `https://tidemusic.vercel.app/`.
 
 ## Notes
 
